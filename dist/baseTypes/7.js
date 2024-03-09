@@ -4,22 +4,23 @@
 */
 var Days;
 (function (Days) {
-  Days["monday"] = "Monday";
-  Days["tuesday"] = "Tuesday";
-  Days["wednesday"] = "Wednesday";
-  Days["thursday"] = "Thursday";
-  Days["friday"] = "Friday";
-  Days["saturday"] = "Saturday";
-  Days["sunday"] = "Sunday";
+    Days["monday"] = "Monday";
+    Days["tuesday"] = "Tuesday";
+    Days["wednesday"] = "Wednesday";
+    Days["thursday"] = "Thursday";
+    Days["friday"] = "Friday";
+    Days["saturday"] = "Saturday";
+    Days["sunday"] = "Sunday";
 })(Days || (Days = {}));
 function isWeekend(day) {
-  if (day === "Saturday" || "Sunday") {
-    console.log(`${day} is a day off`);
-    return true;
-  } else {
-    console.log(`${day} is a working day`);
-    return false;
-  }
+    if (day === Days.saturday || day === Days.sunday) {
+        console.log(`${day} is a day off`);
+        return true;
+    }
+    else {
+        console.log(`${day} is a working day`);
+        return false;
+    }
 }
-isWeekend(Days.friday);
+isWeekend(Days.sunday);
 //# sourceMappingURL=7.js.map
