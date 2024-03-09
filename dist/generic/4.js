@@ -1,22 +1,17 @@
 /*
   Використовуйте generics та інтерфейси, щоб виправити помилку в наступних класах:
 */
-
-interface Title {
-  title: string;
+class Component {
+    constructor(props) {
+        this.props = props;
+    }
 }
-
-class Component<T> {
-  constructor(public props: T) {}
+class Page extends Component {
+    pageInfo() {
+        console.log(this.props.title);
+    }
 }
-
-class Page extends Component<Title> {
-  pageInfo() {
-    console.log(this.props.title);
-  }
-}
-
 const title = new Page({ title: "Hello!" });
 title.pageInfo();
-
 export {};
+//# sourceMappingURL=4.js.map
